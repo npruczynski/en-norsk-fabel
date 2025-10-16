@@ -456,162 +456,216 @@
         <audio id="nokAudio" src="nok.mp3"></audio>
     </div>
     <script>
-        const lyrics = {
-            stavakt: `Hver og en av dere\nLa oss alle lære\nPå vår lille blå sfære\nSuser gjennom rommet\nVår menneskelige rase\nMens trøbbel begynner å brygge\nKampen raser på vår scene\nOg ingen hjerter forblir rene\nVi vil alle føle dens berøring\nMennesker står\nMed våpen i hånd\nDe ser døden altfor mye\nAltfor mye\n\nVi klarer det ei, helt alene\nHver for seg med denne steinen\nTrenger vår bror rett ved siden av\nFar, mor, søster står vakt\nRundt solen har vår reise kalt\nPå å endre det vi har gjort galt\nFøler kjærligheten vi har inni oss\nFar, mor, søster stå vakt\nstå vakt\nstå vakt\n\nInnvandrere og uskyldige\nFlyktninger\nDe føler smerten dypt igjen\nOg feller tårer som av regn\nVil det gjøre vondt foruten ende?\nFra himmel ned til jord\nGi oss fred, er mine ord\nLa den spire og gro\nJeg håper romvesener ser\nEt folk av brødre når de ler\nIkke fiender, men venner\nEr det den fremtid vi kjenner?\n\nVi klarer det ei, helt alene\nHver for seg med denne steinen\nTrenger vår bror rett ved siden av\nFar, mor, søster står vakt\nRundt solen har vår reise kalt\nPå å endre det vi har gjort galt\nFøl kjærligheten vi har inni oss\nFar, mor, søster stå vakt\nstå vakt\nstå vakt`,
-            salmiakki: `Hva ville jeg sagt til Borghild,\nen nordisk sjel fra en svunnen tid?\nHva ville jeg gjort ved kjøkkenbordet,\ndelt historien om hun jeg vil at hun skal vite om?\nJeg ville sagt jeg elsker barnebarnet ditt,\nat Britt betyr alt for meg.\nJeg ville sagt at sola lyser opp mitt liv,\nog spurt om hun ville hatt litt Salmiakki.\n\nHva ville jeg sagt til Oskar,\nthe man who raised the one I love?\nI hope he looks down on us with pride,\nand knows that his girl is being well taken care of.\nI would have said I love his daughter,\nthat Britt means everything to me.\nI would have said the sun lights up my life,\nand asked if he'd like some Salmiakki.\n\nOne day I will meet Torill,\nthat day we will share a meal.\nThen my heart will become a little Norwegian,\nwith all the feelings that I feel.\nI will say that I love your daughter,\nI will say that Britt means everything to me.\nI will say that the sun lights up my life,\nI will share some Salmiakki.`,
-            katte: `Man gjeter ikke katter, man slåss med de jævlene.\nI mine sytti år har jeg sett nok av tosker i fare,\nsom senket guarden når hunnkatten var løpsk og hannkatten var harde.\nÉn dråpe blod, og instinktet er tent,\nog et menneskeliv er for alltid endt.\nMed klør kvasse som kniver, et blodig farvel,\ntil øyne og nese, til hud og til fell.\nJeg er en katte-driver, en katte-plager.\nMed min katte-lasso... er jeg en puse-jager.\n\nDet som er brent i mitt minne, er helvetessommeren i '69.\nMens hippiene danset, et sted i New York,\nvar vi ved Colorado, der elven delte seg.\nFlokken dro sørover i en het, tåkefull natt,\nunder skyer badet i månens kalde prakt.\nVi presset på videre til Diablo Canyon,\ninn i et sted der all håp forsvant hen.\nAv femtiseks mann som startet den ferden,\ner jeg den eneste igjen her i verden.\nJeg er en katte-driver, en katte-plager.\nMed min katte-lasso... er jeg en puse-jager.\n\nFrank var den første som falt ned i støvet,\nden natten vi så heten bli til ren blodtørst.\nHoggtenner og klør fór ut fra hver sprekk,\njeg fant en hule og gjemte meg vekk.\nBygde et bål av falne greiner,\nog det er den eneste grunnen til at du ser meg.\nJeg holdt meg våken og matet mitt fyr,\nfor bortenfor flammen var blodtørstige dyr.\nMed alle kameratene døde, fullständig slaktet,\ndrev de blodige beistene sin paringsakt.\nSin jævla paringsakt.\n\nJeg sier dere, godtfolk, de kattene er der ute. Pass på livene deres. Frykt Morderflokken fra Kløfta.\nJeg er en katte-driver, en katte-plager.\nMed min katte-lasso... er jeg en puse-jager.\nJeg er en katte-driver...\nPuse-jager...\nPuse-jager.`,
-            kaboom: `Ta inn det dyrebare syn, min venn,\njeg tror vår tid snart er forbi.\nFra sekund til sekund inntil da,\nblir øyeblikkene til sol.\nHvis du er god, er det forstått\nat handlinger dikterer skjebner.\nGjør det du vet du burde,\nog håp at porten står åpen.\n\nMen det er de som prøver å skade,\nsom utnytter de svake.\nDe sterke må alltid være på vakt,\nsannheten vi alle burde jakte på.\nDe slemme gutta blir smartere,\nhver dag vokser antallet.\nJeg er sikker på at i profetens hjerte,\nville fred og kjærlighet flyte.\nMen noen som følger ham,\nhar hat i sitt bryst.\nHvis noen selger bomben til dem,\nKa Boom! Da går det hele.\n\nTa inn det dyrebare syn, min venn,\njeg tror vår tid snart er forbi.\nFra sekund til sekund inntil da,\nblir øyeblikkene til sol.\nDe slemme gutta blir smartere,\nhver dag vokser antallet.\nJeg er sikker på at i profetens hjerte,\nville fred og kjærlighet flyte.\nBut some who follow him,\nhave hate within their breast.\nIf someone sells the bomb to them,\nKa Boom! Then goes the rest.`,
-            nok: `Nå har vi fått nok av hatet,\nog nok av all smerten.\nTida som har rent bort uten mening.\nVi ser det, vi forstår det,\nmen det er ingen som gjør noen vending.\nDet handler om penger,\ndet handler om grådighet.\nOm det du kan gi,\ndet handler om behov.\nKan du virkelig være lykkelig,\ni den tilstanden vi er?\nAlt omkring\nsynker sannheten inn.\n\nDet er dette vi etterlater,\ndet er dette vi har funnet.\nDette er arven,\nsom vi skal gravlegge her.\nDet handler om deres penger,\ndet handler om deres grådighet.\nOm det du kan gi,\ndet handler om deres behov.\nVi ser det alle på X,\nvi ser det gratis.\nVi må være der for hverandre – men nei,\ndet er ikke vår virkelighet.\n\nDet handler om deres penger,\ndet handler om deres grådighet.\nOm det du ikke kan gi,\ndet handler om deres behov.\nOm det du ikke kan gi,\ndet handler om deres behov.\nOg de har bare så vidt begynt.`
-        };
-        const translations = {
-            stavakt: `Each and every one of you\nLet us all learn\nOn our little blue sphere\nSoaring through space\nOur human race\nAs trouble begins to brew\nThe battle rages on our stage\nAnd no hearts remain pure\nWe will all feel its touch\nHumans stand\nWith weapons in hand\nThey see death far too much\nFar too much\n\nWe can't make it, all alone\nEach one with this stone\nNeed our brother right by our side\nFather, mother, sister stand guard\nAround the sun our journey has called\nTo change what we have done wrong\nFeel the love we have within us\nFather, mother, sister stand guard\nstand guard\nstand guard\n\nImmigrants and the innocent\nRefugees\nThey feel the pain deeply again\nAnd shed tears like rain\nWill it hurt without end?\nFrom heaven down to earth\nGive us peace, are my words\nLet it sprout and grow\nI hope aliens see\nA people of brothers when they laugh\nNot enemies, but friends\nIs that the future we know?\n\nWe can't make it, all alone\nEach one with this stone\nNeed our brother right by our side\nFather, mother, sister stand guard\nAround the sun our journey has called\nTo change what we have done wrong\nFeel the love we have within us\nFather, mother, sister stand guard\nstand guard\nstand guard`,
-            salmiakki: `What would I have said to Borghild,\na Nordic soul from a bygone era?\nWhat would I have done at the kitchen table,\nshared the story of the one I want her to know about?\nI would have said I love your grandchild,\nthat Britt means everything to me.\nI would have said the sun lights up my life,\nand asked if she'd like some Salmiakki.\n\nWhat would I have said to Oskar,\nthe man who raised the one I love?\nI hope he looks down on us with pride,\nand knows that his girl is being well taken care of.\nI would have said I love his daughter,\nthat Britt means everything to me.\nI would have said the sun lights up my life,\nand asked if he'd like some Salmiakki.\n\nOne day I will meet Torill,\nthat day we will share a meal.\nThen my heart will become a little Norwegian,\nwith all the feelings that I feel.\nI will say that I love your daughter,\nI will say that Britt means everything to me.\nI will say that the sun lights up my life,\nI will share some Salmiakki.`,
-            katte: `You don't herd cats, you fight the bastards.\nIn my seventy years, I've seen enough fools in danger,\nwho lowered their guard when the she-cat was in heat and the toms were hard.\nOne drop of blood, and the instinct is lit,\nand a human life is forever ended.\nWith claws sharp as knives, a bloody farewell,\nto eyes and nose, to skin and to hide.\nI am a cat-driver, a cat-tormentor.\nWith my cat-lasso... I am a kitty-chaser.\n\nWhat is burned in my memory, is the hell-summer of '69.\nWhile the hippies danced, somewhere in New York,\nwe were by the Colorado, where the river divided.\nThe pack went south on a hot, misty night,\nunder clouds bathed in the moon's cold splendor.\nWe pressed on to Diablo Canyon,\ninn i et sted der all håp forsvant hen.\nOf fifty-six men who started that journey,\nI am the only one left in this world.\nI am a cat-driver, a cat-tormentor.\nWith my cat-lasso... I am a kitty-chaser.\n\nFrank was the first to fall in the dust,\nthe night we saw the heat turn to pure bloodlust.\nHoggtenner og klør fór ut fra hver sprekk,\njeg fant en hule og gjemte meg vekk.\nBygde et bål av falne greiner,\nog det er den eneste grunnen til at du ser meg.\nJeg holdt meg våken og matet mitt fyr,\nfor bortenfor flammen var blodtørstige dyr.\nMed alle kameratene døde, fullständig slaktet,\ndrev de blodige beistene sin paringsakt.\nTheir damn mating act.\n\nI'm telling you, good people, those cats are out there. Watch your lives. Fear the Murder-pack from the Gorge.\nI am a cat-driver, a cat-tormentor.\nWith my cat-lasso... I am a kitty-chaser.\nI am a cat-driver...\nKitty-chaser...\nKitty-chaser.`,
-            kaboom: `Take in the precious sight, my friend,\nI believe our time is soon over.\nFrom second to second until then,\nthe moments turn to sun.\nIf you are good, it is understood\nthat actions dictate fates.\nDo what you know you should,\nand hope the gate stands open.\n\nBut there are those who try to harm,\nwho exploit the weak.\nThe strong must always be on guard,\nthe truth we all should seek.\nThe bad guys are getting smarter,\nevery day their numbers grow.\nI'm sure that in the Prophet's heart,\npeace and love would flow.\nBut some who follow him,\nhave hate within their breast.\nIf someone sells the bomb to them,\nKa Boom! Then goes the rest.\n\nTake in the precious sight, my friend,\nI believe our time is soon over.\nFrom second to second until then,\nthe moments turn to sun.\nThe bad guys are getting smarter,\nevery day their numbers grow.\nI'm sure that in the Prophet's heart,\npeace and love would flow.\nBut some who follow him,\nhave hate within their breast.\nIf someone sells the bomb to them,\nKa Boom! Then goes the rest.`,
-            nok: `Now we have had enough of the hatred,\nand enough of all the pain.\nThe time that has flowed away without meaning.\nWe see it, we understand it,\nbut no one is making a change.\nIt's about money,\nit's about greed.\nAbout what you can give,\nit's about need.\nCan you really be happy,\ni den tilstanden vi er?\nAlt omkring\nsynker sannheten inn.\n\nDet er dette vi etterlater,\ndet er dette vi har funnet.\nDette er arven,\nsom vi skal gravlegge her.\nDet handler om deres penger,\ndet handler om deres grådighet.\nOm det du kan gi,\ndet handler om deres behov.\nVi ser det alle på X,\nvi ser det gratis.\nVi må være der for hverandre – men nei,\ndet er ikke vår virkelighet.\n\nDet handler om deres penger,\ndet handler om deres grådighet.\nOm det du ikke kan gi,\ndet handler om deres behov.\nOm det du ikke kan gi,\ndet handler om deres behov.\nOg de har bare så vidt begynt.`
-        };
+    const songs = {
+        stavakt: {
+            norwegian: `Hver og en av dere\nLa oss alle lære\nPå vår lille blå sfære\nSuser gjennom rommet\nVår menneskelige rase\nMens trøbbel begynner å brygge\nKampen raser på vår scene\nOg ingen hjerter forblir rene\nVi vil alle føle dens berøring\nMennesker står\nMed våpen i hånd\nDe ser døden altfor mye\nAltfor mye\n\nVi klarer det ei, helt alene\nHver for seg med denne steinen\nTrenger vår bror rett ved siden av\nFar, mor, søster står vakt\nRundt solen har vår reise kalt\nPå å endre det vi har gjort galt\nFøler kjærligheten vi har inni oss\nFar, mor, søster stå vakt\nstå vakt\nstå vakt\n\nInnvandrere og uskyldige\nFlyktninger\nDe føler smerten dypt igjen\nOg feller tårer som av regn\nVil det gjøre vondt foruten ende?\nFra himmel ned til jord\nGi oss fred, er mine ord\nLa den spire og gro\nJeg håper romvesener ser\nEt folk av brødre når de ler\nIkke fiender, men venner\nEr det den fremtid vi kjenner?\n\nVi klarer det ei, helt alene\nHver for seg med denne steinen\nTrenger vår bror rett ved siden av\nFar, mor, søster står vakt\nRundt solen har vår reise kalt\nPå å endre det vi har gjort galt\nFøl kjærligheten vi har inni oss\nFar, mor, søster stå vakt\nstå vakt\nstå vakt`,
+            english: `Each and every one of you\nLet us all learn\nOn our little blue sphere\nSoaring through space\nOur human race\nAs trouble begins to brew\nThe battle rages on our stage\nAnd no hearts remain pure\nWe will all feel its touch\nHumans stand\nWith weapons in hand\nThey see death far too much\nFar too much\n\nWe can't make it, all alone\nEach one with this stone\nNeed our brother right by our side\nFather, mother, sister stand guard\nAround the sun our journey has called\nTo change what we have done wrong\nFeel the love we have within us\nFather, mother, sister stand guard\nstand guard\nstand guard\n\nImmigrants and the innocent\nRefugees\nThey feel the pain deeply again\nAnd shed tears like rain\nWill it hurt without end?\nFrom heaven down to earth\nGive us peace, are my words\nLet it sprout and grow\nI hope aliens see\nA people of brothers when they laugh\nNot enemies, but friends\nIs that the future we know?\n\nWe can't make it, all alone\nEach one with this stone\nNeed our brother right by our side\nFather, mother, sister stand guard\nAround the sun our journey has called\nTo change what we have done wrong\nFeel the love we have within us\nFather, mother, sister stand guard\nstand guard\nstand guard`
+        },
+        salmiakki: {
+            norwegian: `Hva ville jeg sagt til Borghild,\nen nordisk sjel fra en svunnen tid?\nHva ville jeg gjort ved kjøkkenbordet,\ndelt historien om hun jeg vil at hun skal vite om?\nJeg ville sagt jeg elsker barnebarnet ditt,\nat Britt betyr alt for meg.\nJeg ville sagt at sola lyser opp mitt liv,\nog spurt om hun ville hatt litt Salmiakki.\n\nHva ville jeg sagt til Oskar,\nmannen som oppdro hun jeg elsker?\nJeg håper han ser ned på oss med stolthet,\nog vet at jenta hans blir tatt godt vare på.\nJeg ville sagt jeg elsker dattera hans,\nat Britt betyr alt for meg.\nJeg ville sagt at sola lyser opp mitt liv,\nog spurt om han ville hatt litt Salmiakki.\n\nEn dag skal jeg møte Torill,\nden dagen skal vi dele et måltid.\nDa vil hjertet mitt bli litt norsk,\nmed alle følelsene som jeg føler.\nJeg skal si at jeg elsker dattera di,\njeg skal si at Britt betyr alt for meg.\nJeg skal si at sola lyser opp mitt liv,\njeg skal dele litt Salmiakki.`,
+            english: `What would I have said to Borghild,\na Nordic soul from a time gone by?\nWhat would I have done at the kitchen table,\nshared the story of the one I want her to know about?\nI would have said I love your grandchild,\nthat Britt means everything to me.\nI would have said the sun lights up my life,\nand asked if she'd like some Salmiakki.\n\nWhat would I have said to Oskar,\nthe man who raised the one I love?\nI hope he looks down on us with pride,\nand knows that his girl is being well taken care of.\nI would have said I love his daughter,\nthat Britt means everything to me.\nI would have said the sun lights up my life,\nand asked if he'd like some Salmiakki.\n\nOne day I will meet Torill,\nthat day we will share a meal.\nThen my heart will become a little Norwegian,\nwith all the feelings that I feel.\nI will say that I love your daughter,\nI will say that Britt means everything to me.\nI will say that the sun lights up my life,\nI will share some Salmiakki.`
+        },
+        katte: {
+            norwegian: `Man gjeter ikke katter, man slåss med de jævlene.\nI mine sytti år har jeg sett nok av tosker i fare,\nsom senket guarden når hunnkatten var løpsk og hannkatten var harde.\nÉn dråpe blod, og instinktet er tent,\nog et menneskeliv er for alltid endt.\nMed klør kvasse som kniver, et blodig farvel,\ntil øyne og nese, til hud og til fell.\nJeg er en katte-driver, en katte-plager.\nMed min katte-lasso... er jeg en puse-jager.\n\nDet som er brent i mitt minne, er helvetessommeren i '69.\nMens hippiene danset, et sted i New York,\nvar vi ved Colorado, der elven delte seg.\nFlokken dro sørover i en het, tåkefull natt,\nunder skyer badet i månens kalde prakt.\nVi presset på videre til Diablo Canyon,\ninn i et sted der all håp forsvant hen.\nAv femtiseks mann som startet den ferden,\ner jeg den eneste igjen her i verden.\nJeg er en katte-driver, en katte-plager.\nMed min katte-lasso... er jeg en puse-jager.\n\nFrank var den første som falt ned i støvet,\nden natten vi så heten bli til ren blodtørst.\nHoggtenner og klør fór ut fra hver sprekk,\njeg fant en hule og gjemte meg vekk.\nBygde et bål av falne greiner,\nog det er den eneste grunnen til at du ser meg.\nJeg holdt meg våken og matet mitt fyr,\nfor bortenfor flammen var blodtørstige dyr.\nMed alle kameratene døde, fullständig slaktet,\ndrev de blodige beistene sin paringsakt.\nSin jævla paringsakt.\n\nJeg sier dere, godtfolk, de kattene er der ute. Pass på livene deres. Frykt Morderflokken fra Kløfta.\nJeg er en katte-driver, en katte-plager.\nMed min katte-lasso... er jeg en puse-jager.\nJeg er en katte-driver...\nPuse-jager...\nPuse-jager.`,
+            english: `You don't herd cats, you fight the bastards.\nIn my seventy years, I've seen enough fools in danger,\nwho lowered their guard when the she-cat was in heat and the toms were hard.\nOne drop of blood, and the instinct is lit,\nand a human life is forever ended.\nWith claws sharp as knives, a bloody farewell,\nto eyes and nose, to skin and to hide.\nI am a cat-driver, a cat-tormentor.\nWith my cat-lasso... I am a kitty-chaser.\n\nWhat is burned in my memory, is the hell-summer of '69.\nWhile the hippies danced, somewhere in New York,\nwe were by the Colorado, where the river divided.\nThe pack went south on a hot, misty night,\nunder clouds bathed in the moon's cold splendor.\nWe pressed on to Diablo Canyon,\ninn i et sted der all håp forsvant hen.\nOf fifty-six men who started that journey,\nI am the only one left in this world.\nI am a cat-driver, a cat-tormentor.\nWith my cat-lasso... I am a kitty-chaser.\n\nFrank was the first to fall in the dust,\nthe night we saw the heat turn to pure bloodlust.\nHoggtenner og klør fór ut fra hver sprekk,\njeg fant en hule og gjemte meg vekk.\nBygde et bål av falne greiner,\nog det er den eneste grunnen til at du ser meg.\nJeg holdt meg våken og matet mitt fyr,\nfor bortenfor flammen var blodtørstige dyr.\nMed alle kameratene døde, fullständig slaktet,\ndrev de blodige beistene sin paringsakt.\nTheir damn mating act.\n\nI'm telling you, good people, those cats are out there. Watch your lives. Fear the Murder-pack from the Gorge.\nI am a cat-driver, a cat-tormentor.\nWith my cat-lasso... I am a kitty-chaser.\nI am a cat-driver...\nKitty-chaser...\nKitty-chaser.`
+        },
+        kaboom: {
+            norwegian: `Ta inn det dyrebare syn, min venn,
+jeg tror vår tid snart er forbi.
+Fra sekund til sekund inntil da,
+blir øyeblikkene til sol.
+Hvis du er god, er det forstått
+at handlinger dikterer skjebner.
+Gjør det du vet du burde,
+og håp at porten står åpen.
 
-        function setLyrics(elementId, text) {
-            const element = document.getElementById(elementId);
-            if (element) {
-                element.innerHTML = text.replace(/\n/g, '<br>');
-            }
+Men det er de som prøver å skade,
+som utnytter de svake.
+De sterke må alltid være på vakt,
+sannheten vi alle burde jakte på.
+De slemme gutta blir smartere,
+hver dag vokser antallet.
+Jeg er sikker på at i profetens hjerte,
+ville fred og kjærlighet flyte.
+Men noen som følger ham,
+har hat i sitt bryst.
+Hvis noen selger bomben til dem,
+Ka Boom! Da går det hele.
+
+Ta inn det dyrebare syn, min venn,
+jeg tror vår tid snart er forbi.
+Fra sekund til sekund inntil da,
+blir øyeblikkene til sol.
+De slemme gutta blir smartere,
+hver dag vokser antallet.
+Jeg er sikker på at i profetens hjerte,
+ville fred og kjærlighet flyte.
+Men noen som følger ham,
+har hat i sitt bryst.
+Hvis noen selger bomben til dem,
+Ka Boom! Da går det hele.`,
+            english: `Take in the precious sight, my friend,
+I believe our time is soon over.
+From second to second until then,
+the moments turn to sun.
+If you are good, it is understood
+that actions dictate fates.
+Do what you know you should,
+and hope the gate stands open.
+
+But there are those who try to harm,
+who exploit the weak.
+The strong must always be on guard,
+the truth we all should seek.
+The bad guys are getting smarter,
+every day their numbers grow.
+I am sure that in the Prophet's heart,
+peace and love would flow.
+But some who follow him,
+have hate in their breast.
+If someone sells the bomb to them,
+Ka Boom! Then the whole thing goes.
+
+Take in the precious sight, my friend,
+I believe our time is soon over.
+From second to second until then,
+the moments turn to sun.
+The bad guys are getting smarter,
+every day their numbers grow.
+I am sure that in the Prophet's heart,
+peace and love would flow.
+But some who follow him,
+have hate in their breast.
+If someone sells the bomb to them,
+Ka Boom! Then the whole thing goes.`
+        },
+        nok: {
+            norwegian: `Nå har vi fått nok av hatet,\nog nok av all smerten.\nTida som har rent bort uten mening.\nVi ser det, vi forstår det,\nmen det er ingen som gjør noen vending.\nDet handler om penger,\ndet handler om grådighet.\nOm det du kan gi,\ndet handler om behov.\nKan du virkelig være lykkelig,\ni den tilstanden vi er?\nAlt omkring\nsynker sannheten inn.\n\nDet er dette vi etterlater,\ndet er dette vi har funnet.\nDette er arven,\nsom vi skal gravlegge her.\nDet handler om deres penger,\ndet handler om deres grådighet.\nOm det du kan gi,\ndet handler om deres behov.\nVi ser det alle på X,\nvi ser det gratis.\nVi må være der for hverandre – men nei,\ndet er ikke vår virkelighet.\n\nDet handler om deres penger,\ndet handler om deres grådighet.\nOm det du ikke kan gi,\ndet handler om deres behov.\nOm det du ikke kan gi,\ndet handler om deres behov.\nOg de har bare så vidt begynt.`,
+            english: `Now we have had enough of the hatred,\nand enough of all the pain.\nThe time that has flowed away without meaning.\nWe see it, we understand it,\nbut no one is making a change.\nIt's about money,\nit's about greed.\nAbout what you can give,\nit's about need.\nCan you really be happy,\ni den tilstanden vi er?\nAlt omkring\nsynker sannheten inn.\n\nDet er dette vi etterlater,\ndet er dette vi har funnet.\nDette er arven,\nsom vi skal gravlegge her.\nDet handler om deres penger,\ndet handler om deres grådighet.\nOm det du kan gi,\ndet handler om deres behov.\nVi ser det alle på X,\nvi ser det gratis.\nVi må være der for hverandre – men nei,\ndet er ikke vår virkelighet.\n\nDet handler om deres penger,\ndet handler om deres grådighet.\nOm det du ikke kan gi,\ndet handler om deres behov.\nOm det du ikke kan gi,\ndet handler om deres behov.\nOg de har bare så vidt begynt.`
         }
-
-        setLyrics('stavaktLyricsText', lyrics.stavakt);
-        setLyrics('salmiakkiLyricsText', lyrics.salmiakki);
-        setLyrics('katteLyricsText', lyrics.katte);
-        setLyrics('kaboomLyricsText', lyrics.kaboom);
-        setLyrics('nokLyricsText', lyrics.nok);
-        setLyrics('stavaktTransText', translations.stavakt);
-        setLyrics('salmiakkiTransText', translations.salmiakki);
-        setLyrics('katteTransText', translations.katte);
-        setLyrics('kaboomTransText', translations.kaboom);
-        setLyrics('nokTransText', translations.nok);
-
-        const audioElements = {
-            stavakt: document.getElementById('stavaktAudio'),
-            salmiakki: document.getElementById('salmiakkiAudio'),
-            katte: document.getElementById('katteAudio'),
-            kaboom: document.getElementById('kaboomAudio'),
-            nok: document.getElementById('nokAudio')
-        };
-
-        let currentAudio = null;
-        let playingButton = null;
-
-        function resetAllButtons() {
-            document.querySelectorAll('.play-button').forEach(btn => {
-                btn.classList.remove('playing');
-                if (btn.dataset.originalText) {
-                    btn.innerHTML = btn.dataset.originalText;
+    };
+    function setContent(elementId, text) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.innerHTML = text.replace(/\n/g, '<br>');
+        }
+    }
+    // A new way to populate content
+    for (const songKey in songs) {
+        if (songs.hasOwnProperty(songKey)) {
+            setContent(`${songKey}LyricsText`, songs[songKey].norwegian);
+            setContent(`${songKey}TransText`, songs[songKey].english);
+        }
+    }
+    const audioElements = {
+        stavakt: document.getElementById('stavaktAudio'),
+        salmiakki: document.getElementById('salmiakkiAudio'),
+        katte: document.getElementById('katteAudio'),
+        kaboom: document.getElementById('kaboomAudio'),
+        nok: document.getElementById('nokAudio')
+    };
+    let currentAudio = null;
+    let playingButton = null;
+    function resetAllButtons() {
+        document.querySelectorAll('.play-button').forEach(btn => {
+            btn.classList.remove('playing');
+            if (btn.dataset.originalText) {
+                btn.innerHTML = btn.dataset.originalText;
+            }
+        });
+    }
+    function setupAudioPlayer(buttonId, audioElement) {
+        const playButton = document.getElementById(buttonId);
+        if (playButton) {
+            playButton.dataset.originalText = playButton.innerHTML;
+            playButton.addEventListener('click', () => {
+                // If a different audio is playing, pause it and reset its button
+                if (currentAudio && currentAudio !== audioElement) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    resetAllButtons();
+                }
+                // Toggle play/pause for the clicked audio
+                if (audioElement.paused) {
+                    audioElement.play();
+                    playButton.classList.add('playing');
+                    playButton.innerHTML = `❚❚`;
+                    currentAudio = audioElement;
+                } else {
+                    audioElement.pause();
+                    playButton.classList.remove('playing');
+                    playButton.innerHTML = playButton.dataset.originalText;
+                    currentAudio = null;
                 }
             });
         }
-
-        function setupAudioPlayer(buttonId, audioElement) {
-            const playButton = document.getElementById(buttonId);
-            if (playButton) {
-                playButton.dataset.originalText = playButton.innerHTML;
-                
-                playButton.addEventListener('click', () => {
-                    // If a different audio is playing, pause it and reset its button
-                    if (currentAudio && currentAudio !== audioElement) {
-                        currentAudio.pause();
-                        currentAudio.currentTime = 0;
-                        resetAllButtons();
-                    }
-                    
-                    // Toggle play/pause for the clicked audio
-                    if (audioElement.paused) {
-                        audioElement.play();
-                        playButton.classList.add('playing');
-                        playButton.innerHTML = `❚❚`;
-                        currentAudio = audioElement;
-                    } else {
-                        audioElement.pause();
-                        playButton.classList.remove('playing');
-                        playButton.innerHTML = playButton.dataset.originalText;
-                        currentAudio = null;
-                    }
-                });
-            }
-        }
-
-        setupAudioPlayer('stavaktBtn', audioElements.stavakt);
-        setupAudioPlayer('salmiakkiBtn', audioElements.salmiakki);
-        setupAudioPlayer('katteBtn', audioElements.katte);
-        setupAudioPlayer('kaboomBtn', audioElements.kaboom);
-        setupAudioPlayer('nokBtn', audioElements.nok);
-
-        const brittThoughtBtn = document.getElementById('brittThoughtBtn');
-        const brittThoughtText = document.getElementById('brittThoughtText');
-        if (brittThoughtBtn) {
-            brittThoughtBtn.addEventListener('click', () => {
-                brittThoughtText.style.display = 'block';
-                brittThoughtBtn.style.display = 'none';
-            });
-        }
-
-        function setupLyricsToggle(buttonId, lyricsId) {
-            const lyricsButton = document.getElementById(buttonId);
-            const lyricsText = document.getElementById(lyricsId);
-            if (lyricsButton) {
-                lyricsButton.addEventListener('click', () => {
-                    const isHidden = lyricsText.style.display === 'none' || lyricsText.style.display === '';
-                    document.querySelectorAll('.lyrics-text, .english-lyrics').forEach(el => el.style.display = 'none');
-                    if (isHidden) {
-                        lyricsText.style.display = 'block';
-                    }
-                });
-            }
-        }
-
-        function setupTranslationToggle(buttonId, transId) {
-            const transButton = document.getElementById(buttonId);
-            const transText = document.getElementById(transId);
-            if (transButton) {
-                transButton.addEventListener('click', () => {
-                    const isHidden = transText.style.display === 'none' || transText.style.display === '';
-                    document.querySelectorAll('.lyrics-text, .english-lyrics').forEach(el => el.style.display = 'none');
-                    if (isHidden) {
-                        transText.style.display = 'block';
-                    }
-                });
-            }
-        }
-
-        setupLyricsToggle('stavaktLyricsBtn', 'stavaktLyricsText');
-        setupLyricsToggle('salmiakkiLyricsBtn', 'salmiakkiLyricsText');
-        setupLyricsToggle('katteLyricsBtn', 'katteLyricsText');
-        setupLyricsToggle('kaboomLyricsBtn', 'kaboomLyricsText');
-        setupLyricsToggle('nokLyricsBtn', 'nokLyricsText');
-
-        setupTranslationToggle('stavaktTransBtn', 'stavaktTransText');
-        setupTranslationToggle('salmiakkiTransBtn', 'salmiakkiTransText');
-        setupTranslationToggle('katteTransBtn', 'katteTransText');
-        setupTranslationToggle('kaboomTransBtn', 'kaboomTransText');
-        setupTranslationToggle('nokTransBtn', 'nokTransText');
-        
-        const fontIncreaseBtn = document.getElementById('font-increase-btn');
-        const fontDecreaseBtn = document.getElementById('font-decrease-btn');
-        const rootHtml = document.querySelector('html');
-
-        if (fontIncreaseBtn && fontDecreaseBtn) {
-            fontIncreaseBtn.addEventListener('click', () => {
-                let currentSize = parseFloat(getComputedStyle(rootHtml).fontSize);
-                if (currentSize < 25) { 
-                    rootHtml.style.fontSize = (currentSize + 1) + 'px';
-                }
-            });
-
-            fontDecreaseBtn.addEventListener('click', () => {
-                let currentSize = parseFloat(getComputedStyle(rootHtml).fontSize);
-                if (currentSize > 15) { 
-                    rootHtml.style.fontSize = (currentSize - 1) + 'px';
+    }
+    setupAudioPlayer('stavaktBtn', audioElements.stavakt);
+    setupAudioPlayer('salmiakkiBtn', audioElements.salmiakki);
+    setupAudioPlayer('katteBtn', audioElements.katte);
+    setupAudioPlayer('kaboomBtn', audioElements.kaboom);
+    setupAudioPlayer('nokBtn', audioElements.nok);
+    const brittThoughtBtn = document.getElementById('brittThoughtBtn');
+    const brittThoughtText = document.getElementById('brittThoughtText');
+    if (brittThoughtBtn) {
+        brittThoughtBtn.addEventListener('click', () => {
+            brittThoughtText.style.display = 'block';
+            brittThoughtBtn.style.display = 'none';
+        });
+    }
+    function setupLyricsToggle(buttonId, lyricsId) {
+        const lyricsButton = document.getElementById(buttonId);
+        const lyricsText = document.getElementById(lyricsId);
+        if (lyricsButton) {
+            lyricsButton.addEventListener('click', () => {
+                const isHidden = lyricsText.style.display === 'none' || lyricsText.style.display === '';
+                document.querySelectorAll('.lyrics-text, .english-lyrics').forEach(el => el.style.display = 'none');
+                if (isHidden) {
+                    lyricsText.style.display = 'block';
                 }
             });
         }
-    </script>
+    }
+    function setupTranslationToggle(buttonId, transId) {
+        const transButton = document.getElementById(buttonId);
+        const transText = document.getElementById(transId);
+        if (transButton) {
+            transButton.addEventListener('click', () => {
+                const isHidden = transText.style.display === 'none' || transText.style.display === '';
+                document.querySelectorAll('.lyrics-text, .english-lyrics').forEach(el => el.style.display = 'none');
+                if (isHidden) {
+                    transText.style.display = 'block';
+                }
+            });
+        }
+    }
+    setupLyricsToggle('stavaktLyricsBtn', 'stavaktLyricsText');
+    setupLyricsToggle('salmiakkiLyricsBtn', 'salmiakkiLyricsText');
+    setupLyricsToggle('katteLyricsBtn', 'katteLyricsText');
+    setupLyricsToggle('kaboomLyricsBtn', 'kaboomLyricsText');
+    setupLyricsToggle('nokLyricsBtn', 'nokLyricsText');
+    setupTranslationToggle('stavaktTransBtn', 'stavaktTransText');
+    setupTranslationToggle('salmiakkiTransBtn', 'salmiakkiTransText');
+    setupTranslationToggle('katteTransBtn', 'katteTransText');
+    setupTranslationToggle('kaboomTransBtn', 'kaboomTransText');
+    setupTranslationToggle('nokTransBtn', 'nokTransText');
+    const fontIncreaseBtn = document.getElementById('font-increase-btn');
+    const fontDecreaseBtn = document.getElementById('font-decrease-btn');
+    const rootHtml = document.querySelector('html');
+    if (fontIncreaseBtn && fontDecreaseBtn) {
+        fontIncreaseBtn.addEventListener('click', () => {
+            let currentSize = parseFloat(getComputedStyle(rootHtml).fontSize);
+            if (currentSize < 25) {
+                rootHtml.style.fontSize = (currentSize + 1) + 'px';
+            }
+        });
+        fontDecreaseBtn.addEventListener('click', () => {
+            let currentSize = parseFloat(getComputedStyle(rootHtml).fontSize);
+            if (currentSize > 15) {
+                rootHtml.style.fontSize = (currentSize - 1) + 'px';
+            }
+        });
+    }
+</script>
 </body>
 </html>
