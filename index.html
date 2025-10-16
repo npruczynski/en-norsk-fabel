@@ -39,14 +39,27 @@
     }
     
     .dedication {
-        font-family: 'Dancing Script', cursive;
-        font-size: 1.5rem;
-        text-align: center;
-        color: #d1bfa7;
-        margin: 1rem auto 3rem auto;
-        line-height: 1.6;
-        max-width: 80%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #d1bfa7;
+    margin: 1rem auto 3rem auto;
+    line-height: 1.6;
+    max-width: 80%;
+    
+    /* MODIFIED: Use a combination of properties to achieve the fade */
+    opacity: 0; 
+    transition: opacity 3s ease-in-out;
+    animation: fadeIn 3s ease-in-out 0.5s forwards; /* New line for the animation */
+}
+
+/* NEW CSS RULE: Define the animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
+}
+    
     
     h1, h2 {
         font-family: 'Cinzel', serif;
